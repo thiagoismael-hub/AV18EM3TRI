@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV1 8th Grade - Answer Key</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .section {
+            padding: 25px 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .question-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        /* === Q1 (Multiple Choice) Styles === */
+        .options-list {
+            list-style-type: lower-alpha; /* a, b, c, d */
+            padding-left: 30px;
+            margin: 10px 0;
+        }
+        .options-list li {
+            padding: 8px;
+            margin: 4px 0;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+        .options-list.revealed .correct-option {
+            background-color: #e6ffed;
+            border-color: #b2dfbc;
+            font-weight: bold;
+        }
+
+        /* === Q2 & Q4 (Subjective) Styles === */
+        .answer {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e6ffed;
+            border: 1px solid #b2dfbc;
+            border-radius: 5px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .answer ol, .answer ul {
+            padding-left: 20px;
+            margin: 5px 0 0 0;
+        }
+        
+        /* === Q4 Image Styles === */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .image-container img {
+            width: 32%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* === Q3, Q5, Q6 (One-by-one) Styles === */
+        .question-line {
+            font-size: 1.05em;
+            line-height: 1.7; /* Default for Q5, Q6 */
+            margin-bottom: 14px; /* Default for Q5, Q6 */
+        }
+        .question-line.paragraph-context {
+            font-size: 1.05em;
+            line-height: 2.3; /* Specific for Q3 paragraph */
+            margin-bottom: 0; /* No margin for the paragraph itself */
+        }
+        .gap {
+            font-weight: bold;
+            color: #555;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            padding: 0 10px;
+        }
+        .inline-answer {
+            display: none;
+            font-weight: bold;
+            color: #218838; /* Green */
+            background-color: #e6ffed;
+            padding: 3px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+            border: 1px solid #b2dfbc;
+        }
+        .word-bank {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #eee;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            line-height: 1.6;
+            font-size: 0.95em;
+            border: 1px solid #ddd;
+        }
+        
+        /* === Button Styles === */
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button.inline-btn {
+            padding: 4px 10px;
+            font-size: 0.8em;
+            margin-left: 5px;
+            margin-right: 2px;
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AV1 English Test - 8th Grade (Answer Key)</h1>
+        </header>
+
+        <div class="section">
+            <h2>Reading (Question 1 & 2)</h2>
+            
+            <div class="question-block">
+                <div class="question-title">1. What made the Mona Lisa different from other portraits of its time?</div>
+                <ol class="options-list" id="q1_1_list">
+                    <li>It was painted with brighter colors.</li>
+                    <li class="correct-option">It showed inner emotions, not just a flat surface.</li>
+                    <li>It was painted on a wall of a monastery.</li>
+                    <li>It represented a mythological story.</li>
+                </ol>
+                <button onclick="toggleHighlight('q1_1_list', this)">Show Answer</button>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">2. Why did Leonardo start creating flying machines?</div>
+                <ol class="options-list" id="q1_2_list">
+                    <li>He wanted to travel to different cities.</li>
+                    <li>He was inspired by birds during his studies.</li>
+                    <li class="correct-option">He first built them as props for theatrical shows.</li>
+                    <li>He worked as an architect for the Duke of Milan.</li>
+                </ol>
+                <button onclick="toggleHighlight('q1_2_list', this)">Show Answer</button>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">3. What best describes Leonardo's main personal quality according to the text?</div>
+                <ol class="options-list" id="q1_3_list">
+                    <li class="correct-option">His curiosity about everything.</li>
+                    <li>His desire for fame.</li>
+                    <li>His mathematical talent.</li>
+                    <li>His skills as an architect.</li>
+                </ol>
+                <button onclick="toggleHighlight('q1_3_list', this)">Show Answer</button>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">2.1. According to the text, why does the smile of the Mona Lisa seem different every time we look at it?</div>
+                <button onclick="toggleAnswer('q2_1', this)">Show Answer</button>
+                <div class="answer" id="q2_1">
+                    <b>(Suggested Answer):</b> Because the emotions she is expressing are difficult to understand, which makes her smile seem slightly different every time.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">2.2. Why do you think Leonardo da Vinci's curiosity helped him become a genius? Give examples from the text.</div>
+                <button onclick="toggleAnswer('q2_2', this)">Show Answer</button>
+                <div class="answer" id="q2_2">
+                    <b>(Suggested Answer - answers will vary):</b><br>
+                    His curiosity pushed him to study many different subjects and make connections between them. This is how he "taught himself to be a genius."<br>
+                    <b>Examples from the text:</b>
+                    <ul>
+                        <li>He dissected human faces to understand how muscles and nerves create expressions (which he used in the Mona Lisa).</li>
+                        <li>He created mechanical props (like flying machines) for theatre, which led him to design real flying machines.</li>
+                        <li>He was curious about everyday things, asking questions like "Why is the sky blue?" or "Describe the tongue of the woodpecker."</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Vocabulary (Question 3)</h2>
+            <div class="question-block">
+                <div class="question-title">Complete the text with words from the box.</div>
+                <div class="word-bank">
+                    portray | meaningful | audience | last | witness | portrait | understanding | subject | capture | scene
+                </div>
+                
+                <p><b>Walt Disney: A Portrait of Imagination</b></p>
+                <p class="question-line paragraph-context">
+                    Walt Disney understood the importance of each (1) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_1', this)">Show</button> <span id="q3_1" class="inline-answer">scene</span> 
+                    in his films, making sure it would resonate with the (2) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_2', this)">Show</button> <span id="q3_2" class="inline-answer">audience</span> 
+                    emotionally. He believed that a strong (3) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_3', this)">Show</button> <span id="q3_3" class="inline-answer">subject</span>, 
+                    whether a character's challenge or a moment of joy, must feel (4) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_4', this)">Show</button> <span id="q3_4" class="inline-answer">meaningful</span> 
+                    and real. Through his animations and films, Disney sought an (5) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_5', this)">Show</button> <span id="q3_5" class="inline-answer">understanding</span> 
+                    of what moves people, what makes a story (6) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_6', this)">Show</button> <span id="q3_6" class="inline-answer">last</span> 
+                    beyond its first viewing. He tried to (7) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_7', this)">Show</button> <span id="q3_7" class="inline-answer">capture</span> 
+                    not just actions but inner feelings, so that viewers might (8) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_8', this)">Show</button> <span id="q3_8" class="inline-answer">witness</span> 
+                    the heart of a character's journey. In many of his works, Disney would (9) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_9', this)">Show</button> <span id="q3_9" class="inline-answer">portray</span> 
+                    characters in a kind of living (10) <span class="gap">________</span> <button class="inline-btn" onclick="revealInline('q3_10', this)">Show</button> <span id="q3_10" class="inline-answer">portrait</span>, 
+                    giving them depth, personality, and vulnerability.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Writing (Question 4)</h2>
+            <div class="question-block">
+                <div class="question-title">Write 4 sentences about the pictures using words from the box.</div>
+                
+                <div class="image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Picasso_The_Weeping_Woman_Tate_Modern_London_1937.jpg" alt="Picasso's Weeping Woman">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Meisje_met_de_parel.jpg" alt="Vermeer's Girl with a Pearl Earring">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Sleeping_Muse.jpg" alt="Brancusi's Sleeping Muse">
+                </div>
+                
+                <div class="word-bank">
+                    represent / image / canvas / scene / anger / shock / certain / realistic / masterpiece
+                </div>
+                <button onclick="toggleAnswer('q4', this)">Show Example Answers</button>
+                <div class="answer" id="q4">
+                    <b>(These are example answers. Student answers will vary.)</b>
+                    <ol>
+                        <li>The first <b>image</b> seems to <b>represent</b> feelings of <b>anger</b> and <b>shock</b>.</li>
+                        <li>The "Girl with a Pearl Earring" is a famous <b>masterpiece</b> painted on <b>canvas</b>.</li>
+                        <li>The sculpture of the sleeping head looks very <b>realistic</b>.</li>
+                        <li>I am <b>certain</b> that the middle painting is the most famous <b>scene</b>.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Use of English (Question 5 & 6)</h2>
+            
+            <div class="question-block">
+                <div class="question-title">Question 5: Complete the sentences using the past passive.</div>
+                
+                <div class="question-line">1. The letter <span class="gap">________</span> (send) to the wrong address. <button class="inline-btn" onclick="revealInline('q5_1', this)">Show</button> <span id="q5_1" class="inline-answer">was sent</span></div>
+                <div class="question-line">2. The windows <span class="gap">________</span> (break) by a baseball. <button class="inline-btn" onclick="revealInline('q5_2', this)">Show</button> <span id="q5_2" class="inline-answer">were broken</span></div>
+                <div class="question-line">3. The painting <span class="gap">________</span> (choose) for the school exhibition. <button class="inline-btn" onclick="revealInline('q5_3', this)">Show</button> <span id="q5_3" class="inline-answer">was chosen</span></div>
+                <div class="question-line">4. The thief <span class="gap">________</span> (catch) by the police last night. <button class="inline-btn" onclick="revealInline('q5_4', this)">Show</button> <span id="q5_4" class="inline-answer">was caught</span></div>
+                <div class="question-line">5. The test <span class="gap">________</span> (correct) by the teacher yesterday. <button class="inline-btn" onclick="revealInline('q5_5', this)">Show</button> <span id="q5_5" class="inline-answer">was corrected</span></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">Question 6: Use the prompts to write sentences in the past passive.</div>
+                
+                <div class="question-line">1. The theory of relativity <span class="gap">________</span>. (develop / Einstein) <button class="inline-btn" onclick="revealInline('q6_1', this)">Show</button> <span id="q6_1" class="inline-answer">was developed by Einstein</span></div>
+                <div class="question-line">2. The song "Valerie" <span class="gap">________</span>. (write / Amy Winehouse) <button class="inline-btn" onclick="revealInline('q6_2', this)">Show</button> <span id="q6_2" class="inline-answer">was written by Amy Winehouse</span></div>
+                <div class="question-line">3. The medal <span class="gap">________</span>. (give / the bravest soldier) <button class="inline-btn" onclick="revealInline('q6_3', this)">Show</button> <span id="q6_3" class="inline-answer">was given to the bravest soldier</span></div>
+                <div class="question-line">4. The treasure <span class="gap">________</span>. (find / deep in the cave) <button class="inline-btn" onclick="revealInline('q6_4', this)">Show</button> <span id="q6_4" class="inline-answer">was found deep in the cave</span></div>
+                <div class="question-line">5. The decision <span class="gap">________</span>. (make / before the meeting) <button class="inline-btn" onclick="revealInline('q6_5', this)">Show</button> <span id="q6_5" class="inline-answer">was made before the meeting</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // === For Q1 (Multiple Choice) ===
+        function toggleHighlight(listId, buttonElement) {
+            var list = document.getElementById(listId);
+            var isRevealed = list.classList.toggle('revealed');
+            
+            if (isRevealed) {
+                buttonElement.textContent = 'Hide Answer';
+            } else {
+                buttonElement.textContent = 'Show Answer';
+            }
+        }
+
+        // === For Q2 & Q4 (Subjective/Block) ===
+        function toggleAnswer(answerId, buttonElement) {
+            var answerElement = document.getElementById(answerId);
+            var currentDisplay = window.getComputedStyle(answerElement).display;
+
+            if (currentDisplay === 'none') {
+                answerElement.style.display = 'block';
+                buttonElement.textContent = 'Hide Answer';
+            } else {
+                answerElement.style.display = 'none';
+                buttonElement.textContent = 'Show Answer';
+            }
+        }
+
+        // === For Q3, Q5, Q6 (One-by-one) ===
+        function revealInline(spanId, buttonElement) {
+            var answerSpan = document.getElementById(spanId);
+            answerSpan.style.display = 'inline'; // Show the answer
+            buttonElement.style.display = 'none'; // Hide the button
+        }
+    </script>
+
+</body>
+</html>
